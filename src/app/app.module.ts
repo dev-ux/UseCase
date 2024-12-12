@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { routes } from './app.routes';// Composant autonome
 
-import { LoginComponent } from './auth/login/login.component';
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//     LoginComponent  // Déclaration du composant ici
-//   ],
-//   imports: [
-//     BrowserModule
-//   ],
-//   providers: [],
-//   bootstrap: [AppComponent]
-// })
-export class AppModule { }
+@NgModule({
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes), // Enregistrement des routes
+  ],
+  providers: [],
+})
+export class AppModule {}
